@@ -1,2 +1,4 @@
 orange_cats filter=lfs diff=lfs merge=lfs -text
 croissants filter=lfs diff=lfs merge=lfs -text
+croissants_original.zip filter=lfs diff=lfs merge=lfs -text
+orange_cats_original.zip filter=lfs diff=lfs merge=lfs -text
