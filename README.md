@@ -33,6 +33,7 @@ The Misc folder contains assets (pictures,charts,etc.) used to write this readme
 * Git clone this repository to your preferred directory 
 **or**
 * Download this repository
+* In the assets folder, there are two zip files. You would need to unzip the files so that you can process the images in the files.
 
 ## Implementation
 (More to come)
