@@ -7,7 +7,12 @@ Created on Fri Aug 16 12:42:24 2019
 """
 
 import os
-#changing working directory to the classifier directory
+'''
+!!!
+changing working directory to the classifier directory
+you will have a different path to your classifier directory
+so you need to change the path to your own path
+'''
 os.chdir("/Users/sophie/croissant-or-cat-classifier/") 
 
 import image_process
@@ -16,12 +21,20 @@ import matplotlib.pyplot as plt
 from tensorflow.keras import models,layers,optimizers
 
 
-
+'''
+!!!
+path of croissant pictures folder 
+You need to change this path to your croissants folder path
+'''
 patho='/Users/sophie/croissant-or-cat-classifier/croissants/'
 image_process.data_augmentation(patho,(50,50))
 cro_set=image_process.img_to_arr(patho)
 cro_set.shape
 
+
+'''
+You need to change this path to your orange_cats folder path
+'''
 pathc='/Users/sophie/croissant-or-cat-classifier/orange_cats/'
 image_process.data_augmentation(pathc,(50,50))
 cat_set=image_process.img_to_arr(pathc)
