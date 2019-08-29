@@ -48,7 +48,8 @@ And below is the plot to show the performance of data training on this model:
 * In the assets folder, there are two zip files. You would need to unzip the files so that you can process the images in the files.
 
 ## Implementation
-(More to come)
+Be aware you would need to change the specific path in the exec.py since we have different working directories and directories to store image sets. To run the model, run the exec.py, and you should see the model start training with 30 epochs. At the end, the program also allows you to plot the training accuracy with respect to epochs.
+
 ## License 
 Apache License 2.0
 
