@@ -12,7 +12,7 @@ import os
 changing working directory to the classifier directory
 you will have a different path to your classifier directory
 so you need to change the path to your own path
-'''
+''' 
 os.chdir("/Users/sophie/croissant-or-cat-classifier/") 
 
 import image_process
