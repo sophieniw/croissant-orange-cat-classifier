@@ -19,6 +19,7 @@ import image_process
 import numpy as np
 import matplotlib.pyplot as plt
 from tensorflow.keras import models,layers,optimizers
+from PIL import Image,ImageOps
 
 
 '''
@@ -114,3 +115,36 @@ plt.xlabel('Epochs')
 plt.ylabel('Acc')
 plt.legend()
 plt.show()
+
+
+#below to test image in the model to see if it's a croissant or a cat
+#build a function to test multiple images
+
+def test_img(path):
+    img=Image.open(path)
+    img=img.resize((50,50))
+    arr=np.array(img)
+    arr=np.expand_dims(arr,axis=0)
+    return (model.predict(arr))
+
+
+'''
+!!!
+You would need to use your own path with the test images
+'''
+path="/Users/sophie/croissant-or-cat-classifier/test_img/test_img"
+#scores=[]
+for item in os.listdir(path):
+    try:
+        imgpath=os.path.join(path,item)
+        score=test_img(imgpath)
+        print(item,score)
+        
+        #scores.append(score)
+    except:
+        print('Error: ', score)
+    
+
+
+
+    
