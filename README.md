@@ -28,7 +28,19 @@ This folder contains a python file that are used to run the classifier.
 ### Misc
 The Misc folder contains assets (pictures,charts,etc.) used to write this readme
 ## Examples
-(More to come)
+After model is developed and compiled, run the model and get the following results (30 epochs):
+
+![Image of epochs_beginning](https://github.com/sophieniw/croissant-orange-cat-classifier/blob/master/misc/epoch1.png)
+
+~
+
+![Image of epochs_finish](https://github.com/sophieniw/croissant-orange-cat-classifier/blob/master/misc/epoch2.png)
+
+
+And below is the plot to show the performance of data training on this model:
+
+![Image of training_graph](https://github.com/sophieniw/croissant-orange-cat-classifier/blob/master/misc/training_graph.png)
+
 ## Installation
 * Git clone this repository to your preferred directory 
 **or**
@@ -36,7 +48,8 @@ The Misc folder contains assets (pictures,charts,etc.) used to write this readme
 * In the assets folder, there are two zip files. You would need to unzip the files so that you can process the images in the files.
 
 ## Implementation
-(More to come)
+Be aware you would need to change the specific path in the exec.py since we have different working directories and directories to store image sets. To run the model, run the exec.py, and you should see the model start training with 30 epochs. At the end, the program also allows you to plot the training accuracy with respect to epochs.
+
 ## License 
 Apache License 2.0
 
