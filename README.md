@@ -15,11 +15,13 @@ This classifie uses Python and the knowledge of data science to classify an imag
 
 ## Folders Explained
 ### Assets
-This folder includes images used for training and testing. Under this folder, there are child folders for:
-* training images for croissant
-* training images for orange cats
-* testing images for croissant
-* testing images for orange cats
+This folder includes images used for training and testing. Under this folder, there are two zip files:
+* images for croissant (480 in total for data augmentation later)
+* images for orange cats (480)
+
+The assets folder also contains a child folder of:
+* testing images for classifier to perform predictions and see if the classifier is accurate
+
 ### Modules
 This folder contains python modules written to help build out reasonable data sets and test if functions and logics work fine. The image_process module contains functions to resize, scale, rotate angles, and add noise, etc. And the cutility module contains a function that count files in a directory.
 
@@ -40,6 +42,15 @@ After model is developed and compiled, run the model and get the following resul
 And below is the plot to show the performance of data training on this model:
 
 ![Image of training_graph](https://github.com/sophieniw/croissant-orange-cat-classifier/blob/master/misc/training_graph.png)
+
+
+
+The last part of the exec.py provides a way to use the model to predict particular images. I picked 4 pictures that are not used in the model previously to see if my model is accurate. Those 4 pictures are stored under assets/test_img.
+The predictions are:
+
+![Image of 
+predictions](https://github.com/sophieniw/croissant-orange-cat-classifier/blob/master/misc/predictions.png)
+
 
 ## Installation
 * Git clone this repository to your preferred directory 
