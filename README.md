@@ -30,6 +30,9 @@ This folder contains a python file that are used to run the classifier.
 ### Misc
 The Misc folder contains assets (pictures,charts,etc.) used to write this readme
 ## Examples
+Notice: if you get the error message with a file named '.DS_store', you could just ignore the error message and keep running the exec.py. The '.DS_store' file is created automatically by the macOS to store folder attributes. It has no negative impact on the program.
+
+
 After model is developed and compiled, run the model and get the following results (30 epochs):
 
 ![Image of epochs_beginning](https://github.com/sophieniw/croissant-orange-cat-classifier/blob/master/misc/epoch1.png)
