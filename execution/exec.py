@@ -132,19 +132,21 @@ def test_img(path):
 !!!
 You would need to use your own path with the test images
 '''
-path="/Users/sophie/croissant-or-cat-classifier/test_img/test_img"
+path="/Users/sophie/croissant-orange-cat-classifier/test_img/"
 #scores=[]
 for item in os.listdir(path):
     try:
         imgpath=os.path.join(path,item)
         score=test_img(imgpath)
-        print(item,score)
-        
+        if score[0][0] > 0.5: 
+            #if the score is higher than 0.5, the result would be orange cats with the label 1 
+            print (item, ': with the score of ', score[0][0], ', this is an orange cade!')
+        else:
+            #if lower than 0.5, the result would be croissants with the label 0
+            print (item, ': with the score of ', score[0][0], ', this is a very cute croissant!')
         #scores.append(score)
     except:
-        print('Error: ', score)
-    
-
+        print ('Error: ', item, score)
 
 
     
