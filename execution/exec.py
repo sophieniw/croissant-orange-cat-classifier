@@ -12,8 +12,8 @@ import os
 changing working directory to the classifier directory
 you will have a different path to your classifier directory
 so you need to change the path to your own path
-''' 
-os.chdir("/Users/sophie/croissant-or-cat-classifier/") 
+'''
+os.chdir("/Users/sophie/croissant-or-cat-classifier/")
 
 import image_process
 import numpy as np
@@ -24,7 +24,7 @@ from PIL import Image,ImageOps
 
 '''
 !!!
-path of croissant pictures folder 
+path of croissant pictures folder
 You need to change this path to your croissants folder path
 '''
 patho='/Users/sophie/croissant-or-cat-classifier/croissants/'
@@ -50,7 +50,7 @@ for i in range(len(cro_set)):
 label_cat=[]
 for i in range(len(cat_set)):
     label_cat.append(1)
-    
+
 np.array(label_croissant)
 np.array(label_cat)
 
@@ -98,6 +98,8 @@ history = model.fit(training_images,training_labels,
                     epochs=30,batch_size=128,
                     validation_data=(test_images, test_labels))
 
+#saving this model for future use
+model.save('croissant_orange_cat_model.h5')
 print(model.summary())
 
 history_dict = history.history
@@ -138,8 +140,8 @@ for item in os.listdir(path):
     try:
         imgpath=os.path.join(path,item)
         score=test_img(imgpath)
-        if score[0][0] > 0.5: 
-            #if the score is higher than 0.5, the result would be orange cats with the label 1 
+        if score[0][0] > 0.5:
+            #if the score is higher than 0.5, the result would be orange cats with the label 1
             print (item, ': with the score of ', score[0][0], ', this is an orange cade!')
         else:
             #if lower than 0.5, the result would be croissants with the label 0
@@ -147,6 +149,3 @@ for item in os.listdir(path):
         #scores.append(score)
     except:
         print ('Error: ', item, score)
-
-
-    
